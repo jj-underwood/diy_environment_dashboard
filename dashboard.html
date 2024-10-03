@@ -1,0 +1,105 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="top-controls">
+      <button id="glanceModeButton" class="icon-button">
+        <i class="material-icons">home</i>
+      </button>
+      <div class="field">
+        <label for="metricsSelect">Metrics</label>
+        <select id="metricsSelect">
+          <option value="" disabled selected>---</option>
+          <option value="temperature">temperature</option>
+          <option value="humidity">humidity</option>
+          <option value="illuminance">illuminance</option>
+          <option value="presence">presence</option>
+          <option value="co2">co2</option>
+          <option value="voc">voc</option>
+          <option value="nox">nox</option>
+          <option value="pm1_0">pm1_0</option>
+          <option value="pm2_5">pm2_5</option>
+          <option value="pm4_0">pm4_0</option>
+          <option value="pm10_0">pm10_0</option>
+          <option value="pm2_5_avg_24h">pm2_5_avg_24h</option>
+          <option value="pm10_0_avg_24h">pm10_0_avg_24h</option>
+          <option value="pressure">pressure</option>
+          <option value="uv">uv</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="deviceSelect">Devices</label>
+        <select id="deviceSelect">
+          <option value="" disabled selected>---</option>
+          <option value="d1-mini-01">d1-mini-01</option>
+          <option value="d1-mini-02">d1-mini-02</option>
+          <option value="d1-mini-03">d1-mini-03</option>
+          <option value="d1-mini-04">d1-mini-04</option>
+          <option value="d1-mini-05">d1-mini-05</option>
+          <option value="d1-mini-06">d1-mini-06</option>
+          <option value="d1-mini-07">d1-mini-07</option>
+          <option value="d1-mini-08">d1-mini-08</option>
+          <option value="d1-mini-09">d1-mini-09</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="dateTimes">Select Date</label>
+        <input type="text" id="dateTimes">
+      </div>
+      <button id="settings" class="icon-button">
+        <i class="material-icons">settings</i>
+      </button>
+    </div>
+    <div id="dashboardContainer" class="dashboard-container">
+      <div id="chartsContainer" class="charts-container"></div>
+    </div>
+    <div id="settingsModal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Settings</h2>
+        <form id="settingsForm">
+          <h3>Devices</h3>
+          <table id="devicesSettings" class="settings-table">
+            <thead>
+              <tr>
+                <th>Device Name</th>
+                <th>Location</th>
+                <th>Line Color</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <h3>Metrics</h3>
+          <table id="metricsSettings" class="settings-table">
+            <thead>
+              <tr>
+                <th>Metric Name</th>
+                <th>Title Name</th>
+                <th>Unit of Measurement</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <button type="button" id="saveSettings">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-crosshair"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+    "devices": [
+        { "deviceName": "device-01", "parameters": { "location": "room-01", "lineColor": "#F44336" } },
+        { "deviceName": "device-02", "parameters": { "location": "room-02", "lineColor": "#E91E63" } },
+        { "deviceName": "device-03", "parameters": { "location": "room-03", "lineColor": "#9C27B0" } },
+        { "deviceName": "device-04", "parameters": { "location": "room-04", "lineColor": "#673AB7" } },
+        { "deviceName": "device-05", "parameters": { "location": "room-05", "lineColor": "#3F51B5" } },
+        { "deviceName": "device-06", "parameters": { "location": "room-06", "lineColor": "#2196F3" } },
+        { "deviceName": "device-07", "parameters": { "location": "room-07", "lineColor": "#00BCD4" } },
+        { "deviceName": "device-08", "parameters": { "location": "room-08", "lineColor": "#009688" } },
+        { "deviceName": "device-09", "parameters": { "location": "room-09", "lineColor": "#4CAF50" } }
+    ],
+    "metrics": [
+        { "metricsName": "temperature", "parameters": { "titleName": "Temperature", "unitOfMeasurement": "°C" } },
+        { "metricsName": "humidity", "parameters": { "titleName": "Humidity", "unitOfMeasurement": "%" } },
+        { "metricsName": "illuminance", "parameters": { "titleName": "Illuminance", "unitOfMeasurement": "lx" } },
+        { "metricsName": "presence", "parameters": { "titleName": "Presence" } },
+        { "metricsName": "co2", "parameters": { "titleName": "CO2", "unitOfMeasurement": "ppm" } },
+        { "metricsName": "voc", "parameters": { "titleName": "VOC" } },
+        { "metricsName": "nox", "parameters": { "titleName": "NOx" } },
+        { "metricsName": "pm1_0", "parameters": { "titleName": "PM1.0", "unitOfMeasurement": "µg/m³" } },
+        { "metricsName": "pm2_5", "parameters": { "titleName": "PM2.5", "unitOfMeasurement": "µg/m³" } },
+        { "metricsName": "pm4_0", "parameters": { "titleName": "PM4.0", "unitOfMeasurement": "µg/m³" } },
+        { "metricsName": "pm10_0", "parameters": { "titleName": "PM10.0", "unitOfMeasurement": "µg/m³" } },
+        { "metricsName": "pm2_5_avg_24h", "parameters": { "titleName": "PM2.5 24H AVG", "unitOfMeasurement": "µg/m³" } },
+        { "metricsName": "pm10_0_avg_24h", "parameters": { "titleName": "PM10.0 24H AVG", "unitOfMeasurement": "µg/m³" } },
+        { "metricsName": "pressure", "parameters": { "titleName": "Pressure", "unitOfMeasurement": "hPa" } },
+        { "metricsName": "uv", "parameters": { "titleName": "UV", "unitOfMeasurement": "UVI" } }
+    ]
+}
