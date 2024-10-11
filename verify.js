@@ -10,11 +10,10 @@ document.getElementById('verify-form').addEventListener('submit', async (event) 
     });
     if (response.ok) {
         const data = await response.json();
-        console.log('data.body', data.body);
-        console.log('data.body.token', data.body.token);
-	console.log('Token before line 15:', localStorage.getItem('token'));
-        localStorage.setItem('token', data.body.token);
-	console.log('Token before line 15:', localStorage.getItem('token'));
+        console.log('data', data);
+        console.log('data.token', data.token);
+        localStorage.setItem('token', data.token);
+	console.log('Token stored in localStorage:', localStorage.getItem('token'));
         alert('Authenticated successfully');
         window.location.href = 'dashboard.html';
     } else {

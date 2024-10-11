@@ -14,8 +14,9 @@ secret_key = os.environ['JWT_SECRET_KEY']
 allow_origin = os.environ['ALLOW_ORIGIN']
 
 def lambda_handler(event, context):
-    email = event['email']
-    code = event['code']
+    email = json.loads(event['body'])['email']
+    code = json.loads(event['body'])['code']
+    logger.info(f"email: {email}, code: {code}")
     
     response = table.get_item(Key={'email': email})
     if 'Item' not in response:
@@ -60,8 +61,7 @@ def lambda_handler(event, context):
                 'Access-Control-Allow-Methods': 'OPTIONS, GET, POST',
                 'Access-Control-Allow-Headers': 'Content-Type'
         },
-        'body':
-            {'token': token}
+        'body': json.dumps({"token": token})
     }
 
 def generate_jwt_token(email):
